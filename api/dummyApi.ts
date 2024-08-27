@@ -1,3 +1,4 @@
+import { OrderType } from "@/interfaces";
 import axios from "axios";
 
 const BASE_URL = "https://dummy-api-topaz.vercel.app";
@@ -19,3 +20,9 @@ export const getPortfolio = async () => {
     const response = await dummyApi.get("/portfolio");
     return response.data;
 }
+
+export const sendOrder = async (orderData: OrderType) => {
+  console.log("sendOrder", orderData);
+  const response = await dummyApi.post("/orders", orderData);
+  return response.data;
+};

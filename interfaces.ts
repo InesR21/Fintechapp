@@ -17,8 +17,15 @@ interface PortfolioType {
   avg_cost_price: number;
 }
 
+interface OrderType {
+  instrument_id: number | string;
+  side: string;
+  type: string;
+  quantity: number | string;
+  price?: number | string;
+}
 
 
 
-export { InstrumentsType, PortfolioType };
+export { InstrumentsType, PortfolioType, OrderType };
 

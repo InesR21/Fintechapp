@@ -4,6 +4,8 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { store } from "./store";
+import { Provider } from "react-redux";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
@@ -48,17 +50,21 @@ export default function RootLayout() {
 
 const RootLayoutNav = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="(modals)/createOrder" options={{
-            presentation: "modal",
-            headerShown: false,
-           }} />
-        </Stack>
-      </GestureHandlerRootView>
-    </QueryClientProvider>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="(modals)/createOrderModal"
+              options={{
+                presentation: "modal",
+                headerShown: false,
+              }}
+            />
+          </Stack>
+        </GestureHandlerRootView>
+      </QueryClientProvider>
+    </Provider>
   );
 };

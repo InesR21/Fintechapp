@@ -15,7 +15,7 @@ const InstrumentsBlock = ({
 
   const handlePress = (instrument: InstrumentsType) => {
     router.push({
-      pathname: "/(modals)/createOrder",
+      pathname: "/(modals)/createOrderModal",
       params: { ...instrument },
     });
   };
