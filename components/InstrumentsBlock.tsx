@@ -13,10 +13,10 @@ const InstrumentsBlock = ({
 }) => {
   const router = useRouter();
 
-  const handlePress = (instrument: InstrumentsType) => {
+  const handlePress = (instrument: InstrumentsType, returnPercentage: number) => {
     router.push({
       pathname: "/(modals)/createOrderModal",
-      params: { ...instrument },
+      params: { ...instrument, returnPercentage },
     });
   };
 
@@ -36,7 +36,7 @@ const InstrumentsBlock = ({
           <TouchableOpacity
             style={[defaultStyles.blockItem, isLastItem && { borderBottomWidth: 0 }]}
             key={instrument.id}
-            onPress={() => handlePress(instrument)}
+            onPress={() => handlePress(instrument, returnPercentage)}
           >
             <Text style={styles.ticker}>{instrument.ticker}</Text>
             <Text style={styles.name}>{instrument.name}</Text>
