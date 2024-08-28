@@ -1,6 +1,7 @@
+
 interface InstrumentsType {
-  id: number;
-  ticker: string;
+  id?: number;
+  ticker?: string;
   name: string;
   type: string;
   last_price: number;
@@ -25,7 +26,40 @@ interface OrderType {
   price?: number | string;
 }
 
+interface OrderResponse {
+  instrument_id?: string;
+  side: "BUY" | "SELL";
+  type: "MARKET" | "LIMIT";
+  quantity: number;
+  id: number;
+  price: number;
+  status: "FILLED" | "PENDING";
+}
 
 
-export { InstrumentsType, PortfolioType, OrderType };
+type ParamsInstruments = {
+  id: string;
+  name: string;
+  last_price: number;
+  close_price: number;
+  returnPercentage: number;
+};
+
+interface LastOrderType {
+  id: number | null;
+  side: string | null;
+  type: string  | null;
+  quantity: number  | null;
+  price: number  | null;
+  status: string  | null;
+}
+
+export {
+  InstrumentsType,
+  PortfolioType,
+  OrderType,
+  OrderResponse,
+  ParamsInstruments,
+  LastOrderType,
+};
 

@@ -12,6 +12,7 @@ import {
   calculateTotalProfit,
   calculateTotalPerformance,
 } from "@/utils/financialUtils";
+import Colors from "@/constants/Colors";
 
 const Portfolio = () => {
   const { data: Portfoliolist = [], isLoading, error } = usePortfolio();
@@ -73,11 +74,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
     justifyContent: "center",
-    marginBottom: 5
+    marginBottom: 5,
   },
   balance: {
     fontSize: 50,
     fontWeight: "bold",
+    color: Colors.dark,
   },
   currency: {
     fontSize: 18,

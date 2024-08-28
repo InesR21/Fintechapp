@@ -1,6 +1,7 @@
 export const ORDER_TEXTS = {
   ORDER_TYPE: "Order Type:",
   ORDER_METHOD: "Order Method:",
+  INPUT_PRICE: "price",
   QUANTITY_PLACEHOLDER: "Quantity",
   PRICE_PLACEHOLDER: "Price",
   SUBMIT_ORDER: "Submit Order",

@@ -1,5 +1,5 @@
 export default {
-  primary: "#3D38ED",
+  primary: "#0052A5",
   primaryMuted: "#C9C8FA",
   background: "#F5F5F5",
   lightBackground: "#E8F5FE", // Fondo más claro como en las imágenes
