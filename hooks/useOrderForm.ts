@@ -8,9 +8,10 @@ import {
   OrderSchema,
   handleCreateOrder,
 } from "@/utils/formUtils";
-import { ORDER_TEXTS, STATUS_TEXTS } from "@/constants/textConstants";
+import { ORDER_TEXTS, ORDER_TYPE, STATUS_TEXTS } from "@/constants/textConstants";
 import { AppDispatch, RootState } from "@/app/store";
 import { resetOrder, createOrder } from "@/features/ordersSlice";
+import { Alert } from "react-native";
 
 export const useOrderForm = () => {
   const [showResult, setShowResult] = useState(false);
@@ -31,7 +32,25 @@ export const useOrderForm = () => {
     initialValues: initialValues(id),
     validationSchema: OrderSchema,
     onSubmit: async (values: OrderType) => {
-      await handleCreateOrder(values, id, dispatch, createOrder);
+       const action = values.side === ORDER_TYPE.BUY ? "Comprar" : "Vender";
+
+      Alert.alert(
+        "Confirmar Orden",
+        `¿Estás seguro de que deseas ${action} ${values.quantity} acciones de ${name}?`,
+        [
+          {
+            text: "Cancelar",
+            style: "cancel",
+          },
+          {
+            text: "Aceptar",
+            onPress: async () => {
+              await handleCreateOrder(values, id, dispatch, createOrder);
+            },
+          },
+        ]
+      );
+
     },
   });
 
@@ -80,7 +99,6 @@ export const useOrderForm = () => {
   };
 
   const handleShowForm = () => {
-    console.log("handleShowForm");
     setAmount("");
     setStockQuantity("");
     formik.resetForm();

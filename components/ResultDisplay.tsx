@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { LastOrderType } from "@/interfaces";
 import Feather from "@expo/vector-icons/Feather";
@@ -57,6 +57,12 @@ const ResultDisplay = ({
     const orderType = type === ORDER_METHODS.MARKET ? "a mercado" : "límite";
     return `${action} ${orderType} de ${quantity} acciones`;
   };
+  useEffect(() => {
+    return () => {
+      handleShowForm();
+    };
+  }
+  , []);
 
   return (
     <View style={styles.container}>

@@ -22,7 +22,6 @@ export const getPortfolio = async () => {
 }
 
 export const sendOrder = async (orderData: OrderType) => {
-  console.log("sendOrder", orderData);
   const response = await dummyApi.post("/orders", orderData);
   return response.data;
 };

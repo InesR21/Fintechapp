@@ -1,4 +1,5 @@
 import { OrderType } from "@/interfaces";
+import { Alert } from "react-native";
 import * as Yup from "yup";
 
 export const initialValues = (instrument_id: string) => ({
@@ -30,7 +31,6 @@ export const OrderSchema = Yup.object().shape({
     dispatch: any,
     createOrder: any
   ) => {
-    console.log("handleSubmit", values);
     try {
       const response = await dispatch(
         createOrder({
@@ -41,11 +41,7 @@ export const OrderSchema = Yup.object().shape({
           price: values.price ? values.price : undefined,
         })
       );
-      console.log(
-        `Order ID: ${response.payload.id}, Status: ${response.payload.status}`,
-        response
-      );
     } catch (error) {
-      console.log("Error:", error);
+      Alert.alert("Error:", (error as Error).message);
     }
   };
