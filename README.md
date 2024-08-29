@@ -70,6 +70,9 @@ A continuación se muestran algunas capturas de pantalla de la aplicación:
 
 <img width="483" alt="image" src="https://github.com/user-attachments/assets/3a48f77a-49aa-473f-a508-159b7fd22038">
 
+## Demo del producto
+
+https://github.com/user-attachments/assets/5c678024-68ed-4b22-9b75-eb262c90ec9b
 
 
 ## Requisitos Previos
@@ -98,9 +101,6 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 ```
 
 ¡Listo! 🚀🚀🚀
-
-
-## Demo del producto
 
 
 ## Autor ✒️
