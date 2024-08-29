@@ -1,4 +1,4 @@
-# Bolsa de Valores - App de Inversión
+# App de Inversión
 
 ## Descripción
 
@@ -6,7 +6,7 @@ Esta es una aplicación móvil sobre inversión en acciones, desarrollada en **R
 
 ## Funcionalidades Principales
 
-- **Consulta de Instrumentos Financieros**: Los usuarios pueden explorar una lista de instrumentos financieros disponibles, con detalles como el nombre de la compañía, su ticker, precio actual y porcentaje de cambio.
+- **Consulta de Instrumentos Financieros**: Los usuarios pueden explorar una lista de instrumentos financieros disponibles, con detalles como el nombre de la compañía, ticker, nombre, ultimo precio y retorno .
 
 - **Visualización del Portafolio**: Los usuarios pueden ver el rendimiento de sus inversiones en tiempo real, incluyendo el valor total del portafolio y las ganancias o pérdidas porcentuales de cada activo.
 
@@ -16,8 +16,6 @@ Esta es una aplicación móvil sobre inversión en acciones, desarrollada en **R
   - **Seguimiento de Órdenes**: Después de enviar una orden, se muestra el estado de la misma (PENDING, FILLED, REJECTED) junto con los detalles de la transacción.
 
 - **Filtrado de Instrumentos**: La app permite buscar y filtrar instrumentos financieros dentro de la lista de acciones, facilitando la navegación y selección.
-
-- **Actualización Dinámica de Inversiones**: Los campos de monto y cantidad de acciones se sincronizan automáticamente, calculando el valor basado en el precio actual del activo, y viceversa.
 
 
 ## Tecnologías Utilizadas
@@ -93,14 +91,6 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ## Demo del producto
 
-
-## Uso de la Aplicación
-
-- Explorar Instrumentos: Desde la pantalla de inicio, navega por la lista de instrumentos financieros disponibles.
-
-- Realizar una Compra/Venta: Selecciona un instrumento financiero, elige el tipo de orden (MARKET o LIMIT), y especifica la cantidad de acciones o el monto total a invertir.
-
-- Ver Portafolio: Dirígete a la sección de portafolio para revisar el estado de tus inversiones y ver las ganancias o pérdidas.
 
 ## Autor ✒️
 
