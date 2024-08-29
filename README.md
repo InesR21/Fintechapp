@@ -53,8 +53,8 @@ A continuación se muestran algunas capturas de pantalla de la aplicación:
 
 - **Compra de Acciones**
 
-<img width="496" alt="image" src="https://github.com/user-attachments/assets/da7a8452-bba8-42ff-b996-5a2340ec60ef">
-<img width="483" alt="image" src="https://github.com/user-attachments/assets/22ef176d-c2ee-4109-8d3f-d017dd6e291b">
+<img width="350" alt="image" src="https://github.com/user-attachments/assets/da7a8452-bba8-42ff-b996-5a2340ec60ef">
+<img width="330" alt="image" src="https://github.com/user-attachments/assets/22ef176d-c2ee-4109-8d3f-d017dd6e291b">
 
 - **Confirmación de Orden**
 
@@ -63,12 +63,9 @@ A continuación se muestran algunas capturas de pantalla de la aplicación:
 
 - **Resultado de la Orden**
 
-<img width="490" alt="image" src="https://github.com/user-attachments/assets/511d8e42-68c3-4060-ac62-79c8d1cb7ff1">
-
-
-<img width="477" alt="image" src="https://github.com/user-attachments/assets/2fa692a1-cf04-4497-8856-30174804991b">
-
-<img width="483" alt="image" src="https://github.com/user-attachments/assets/3a48f77a-49aa-473f-a508-159b7fd22038">
+<img width="320" alt="image" src="https://github.com/user-attachments/assets/511d8e42-68c3-4060-ac62-79c8d1cb7ff1">
+<img width="320" alt="image" src="https://github.com/user-attachments/assets/2fa692a1-cf04-4497-8856-30174804991b">
+<img width="320" alt="image" src="https://github.com/user-attachments/assets/3a48f77a-49aa-473f-a508-159b7fd22038">
 
 ## Demo del producto
 
