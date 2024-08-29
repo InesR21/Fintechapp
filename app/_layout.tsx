@@ -4,7 +4,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { store } from "./store";
+import { store } from "../redux/store";
 import { Provider } from "react-redux";
 import { useEffect } from "react";
 import "react-native-reanimated";

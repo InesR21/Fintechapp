@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React from "react";
-import { PortfolioType } from "@/interfaces";
 import { defaultStyles } from "@/constants/Styles";
 import { usePortfolio } from "@/hooks/usePortfolio";
 import CustomHeader from "@/components/CustomHeader";

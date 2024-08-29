@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     padding: 10,
-    backgroundColor: Colors.white, // Blanco para el fondo de la tarjeta
+    backgroundColor: Colors.white,
     borderRadius: 10,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   },
   currency: {
     fontSize: 16,
-    color: Colors.gray, // Gris para el texto "ARS""#626D77"
+    color: Colors.gray,
   },
   percentageChangeContainer: {
     flexDirection: "row",
@@ -113,11 +113,11 @@ const styles = StyleSheet.create({
     color: Colors.danger,
   },
   percentageChangePositive: {
-    color: Colors.success, // Verde para el cambio positivo
+    color: Colors.success,
   },
   changeValue: {
     fontSize: 16,
-    color: Colors.success, // Verde para el valor de cambio
+    color: Colors.success,
   }
 });
 
