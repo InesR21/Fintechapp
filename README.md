@@ -38,27 +38,27 @@ A continuación se muestran algunas capturas de pantalla de la aplicación:
 
 - **Pantalla de Inicio**
 
-<img width="477" alt="image" src="https://github.com/user-attachments/assets/372cc56e-2509-44f9-b85f-cece31240041">
+<img width="377" alt="image" src="https://github.com/user-attachments/assets/372cc56e-2509-44f9-b85f-cece31240041">
 
 
 - **Lista de Instrumentos Financieros**
 
-<img width="491" alt="image" src="https://github.com/user-attachments/assets/e0d00317-0b32-415d-8aa1-5b428f76877a">
+<img width="391" alt="image" src="https://github.com/user-attachments/assets/e0d00317-0b32-415d-8aa1-5b428f76877a">
 
 
 - **Visualización del Portafolio**
 
-<img width="488" alt="image" src="https://github.com/user-attachments/assets/89c56e82-e8b4-4406-a891-79351d50a2c6">
+<img width="388" alt="image" src="https://github.com/user-attachments/assets/89c56e82-e8b4-4406-a891-79351d50a2c6">
 
 
 - **Compra de Acciones**
 
 <img width="350" alt="image" src="https://github.com/user-attachments/assets/da7a8452-bba8-42ff-b996-5a2340ec60ef">
-<img width="330" alt="image" src="https://github.com/user-attachments/assets/22ef176d-c2ee-4109-8d3f-d017dd6e291b">
+<img width="340" alt="image" src="https://github.com/user-attachments/assets/22ef176d-c2ee-4109-8d3f-d017dd6e291b">
 
 - **Confirmación de Orden**
 
-<img width="485" alt="image" src="https://github.com/user-attachments/assets/efb1af1c-bf1f-4f0f-ac2c-0dbc49cbe0c0">
+<img width="385" alt="image" src="https://github.com/user-attachments/assets/efb1af1c-bf1f-4f0f-ac2c-0dbc49cbe0c0">
 
 
 - **Resultado de la Orden**
