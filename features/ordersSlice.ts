@@ -51,7 +51,19 @@ export const createOrder = createAsyncThunk<
 const orderSlice = createSlice({
   name: "orders",
   initialState,
-  reducers: {},
+  reducers: {
+    resetOrder: (state) => {
+      state.lastOrder = {
+        id: null,
+        side: null,
+        type: null,
+        quantity: null,
+        price: null,
+        status: null,
+      };
+      state.status = "idle";
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(createOrder.pending, (state) => {
@@ -78,5 +90,7 @@ const orderSlice = createSlice({
       });
   },
 });
+
+export const { resetOrder } = orderSlice.actions;
 
 export default orderSlice.reducer;

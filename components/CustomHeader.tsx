@@ -19,33 +19,12 @@ const CustomHeader = ({
     <BlurView
       intensity={60}
       tint={"extraLight"}
-      style={{ paddingTop: top, backgroundColor: "rgba(0,0,0,0.05)" }}
+      style={[styles.blurView, { paddingTop: top }]}
     >
-      <View
-        style={[
-          styles.container,
-          {
-            height: 60,
-            gap: 10,
-            paddingHorizontal: 20,
-            backgroundColor: "transparent",
-          },
-        ]}
-      >
+      <View style={styles.container}>
         <Link href={"/(modals)/account"} asChild>
-          <TouchableOpacity
-            style={{
-              width: 40,
-              height: 40,
-              borderRadius: 20,
-              backgroundColor: Colors.gray,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text style={{ color: "#fff", fontWeight: "500", fontSize: 16 }}>
-              SG
-            </Text>
+          <TouchableOpacity style={styles.profileButton}>
+            <Text style={styles.profileButtonText}>SG</Text>
           </TouchableOpacity>
         </Link>
         <View style={styles.searchSection}>
@@ -75,14 +54,30 @@ const CustomHeader = ({
 };
 
 const styles = StyleSheet.create({
+  blurView: {
+    backgroundColor: "rgba(0,0,0,0.05)",
+  },
   container: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    height: 60,
+    gap: 10,
+    paddingHorizontal: 20,
+    backgroundColor: "transparent",
   },
-  btn: {
-    padding: 10,
+  profileButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     backgroundColor: Colors.gray,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  profileButtonText: {
+    color: "#fff",
+    fontWeight: "500",
+    fontSize: 16,
   },
   searchSection: {
     flex: 1,
@@ -114,4 +109,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
 export default CustomHeader;

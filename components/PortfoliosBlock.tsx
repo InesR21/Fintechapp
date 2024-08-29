@@ -3,8 +3,10 @@ import { View, Text, StyleSheet } from "react-native";
 import { PortfolioType } from "@/interfaces";
 import { defaultStyles } from "@/constants/Styles";
 import { formatCurrency } from "@/utils/financialUtils";
+import Colors from "@/constants/Colors";
 
 const PortfoliosBlock = ({ portfolios }: { portfolios: PortfolioType[] }) => {
+
   return (
     <View style={styles.contentLis}>
       {portfolios.map((portfolio: PortfolioType, index: number) => {
@@ -89,10 +91,10 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
   positive: {
-    color: "green",
+    color: Colors.success,
   },
   negative: {
-    color: "red",
+    color: Colors.danger,
   },
 });
 

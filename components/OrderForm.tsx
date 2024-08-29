@@ -38,6 +38,7 @@ const OrderForm = ({
   handleChangeInputPrice,
   handleChangeOrderType,
 }: OrderFormProps) => {
+
   const labelPriceTitle = isOrderTypeBuy
     ? "¿Qué monto querés invertir?"
     : "Monton aproximado a recibir";
@@ -54,7 +55,6 @@ const OrderForm = ({
           value={amount}
           onChangeText={onAmountChange}
           placeholder="AR$ 0,00"
-          placeholderTextColor="#B0B3B5" // Color gris claro
           keyboardType="numeric"
         />
       </View>
@@ -138,16 +138,16 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#0052A5", // Azul oscuro para las etiquetas
+    color: Colors.primary,
     marginBottom: 8,
   },
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#FFFFFF", // Fondo blanco para el input
+    backgroundColor: Colors.white,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#E1F1FF", // Borde azul claro
+    borderColor: Colors.blueLight,
     paddingHorizontal: 10,
     paddingVertical: 12,
     marginBottom: 16,
@@ -155,8 +155,8 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
-    color: "#141518", // Color oscuro para el texto
-    textAlign: "right", // Alinear texto a la derecha
+    color: Colors.dark,
+    textAlign: "right",
   },
   error: {
     color: "red",
@@ -168,15 +168,15 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     paddingHorizontal: 4,
     marginVertical: 10,
-    backgroundColor: "#E1F1FF",
+    backgroundColor: Colors.blueLight,
     width: "36%",
     borderRadius: 30,
   },
   inactiveButton: {
-    backgroundColor: "#E1F1FF", // Azul claro para el botón inactivo
+    backgroundColor: Colors.blueLight,
   },
   activeButton: {
-    backgroundColor: "#0052A5", // Azul oscuro para el botón activo
+    backgroundColor: Colors.primary,
   },
   toggleButton: {
     flex: 1,
@@ -188,10 +188,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   inactiveButtonText: {
-    color: "#0052A5", // Azul oscuro para el texto del botón inactivo
+    color: Colors.primary,
   },
   activeButtonText: {
-    color: Colors.white, // Blanco para el texto del botón activo
+    color: Colors.white,
   },
 });
 

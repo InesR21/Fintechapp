@@ -10,8 +10,9 @@ import {
 } from "@/utils/formUtils";
 import { ORDER_TEXTS, STATUS_TEXTS } from "@/constants/textConstants";
 import { AppDispatch, RootState } from "@/app/store";
+import { resetOrder, createOrder } from "@/features/ordersSlice";
 
-export const useOrderForm = (createOrder: any) => {
+export const useOrderForm = () => {
   const [showResult, setShowResult] = useState(false);
   const [selectedOrderType, setSelectedOrderType] = useState("BUY");
   const [amount, setAmount] = useState("");
@@ -78,15 +79,24 @@ export const useOrderForm = (createOrder: any) => {
     setFieldValue("type", orderType);
   };
 
-      const isOrderTypeBuy = selectedOrderType === ORDER_TEXTS.BUY;
-      const isOrderTypeSell = selectedOrderType === ORDER_TEXTS.SELL;
+  const handleShowForm = () => {
+    console.log("handleShowForm");
+    setAmount("");
+    setStockQuantity("");
+    formik.resetForm();
+    dispatch(resetOrder());
+    setShowResult(false);
+  }
 
-      const buttonTitle = isOrderTypeBuy ? "Comprar" : "Vender";
+  const isOrderTypeBuy = selectedOrderType === ORDER_TEXTS.BUY;
+  const isOrderTypeSell = selectedOrderType === ORDER_TEXTS.SELL;
 
-      const isLoading = status === STATUS_TEXTS.LOADING;
-      const hasQuantityValue = quantity > 0;
-      const isOrderMarket = values.type === ORDER_TEXTS.MARKET;
-      const isOrderLimit = values.type === ORDER_TEXTS.LIMIT;
+  const buttonTitle = isOrderTypeBuy ? "Comprar" : "Vender";
+
+  const isLoading = status === STATUS_TEXTS.LOADING;
+  const hasQuantityValue = quantity > 0;
+  const isOrderMarket = values.type === ORDER_TEXTS.MARKET;
+  const isOrderLimit = values.type === ORDER_TEXTS.LIMIT;
 
   useEffect(() => {
     if (status === STATUS_TEXTS.SUCCEEDED || status === STATUS_TEXTS.FAILED) {
@@ -108,18 +118,19 @@ export const useOrderForm = (createOrder: any) => {
     formik,
     errors,
     touched,
-      price,
+    price,
     isOrderTypeBuy,
-      isOrderTypeSell,
-      buttonTitle,
-      isLoading,
-      hasQuantityValue,
-      isOrderMarket,
-        isOrderLimit,
+    isOrderTypeSell,
+    buttonTitle,
+    isLoading,
+    hasQuantityValue,
+    isOrderMarket,
+    isOrderLimit,
     handleSelectOrderType,
     handleAmountChange,
     handleQuantityChange,
     handlePriceChange,
     handleChangeOrderType,
+    handleShowForm
   };
 };

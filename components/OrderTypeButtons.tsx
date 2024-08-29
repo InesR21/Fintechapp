@@ -15,6 +15,7 @@ const OrderTypeButtons = ({
     isOrderTypeSell,
     isOrderTypeBuy,
 }: OrderTypeButtonsProps) => {
+
   return (
     <View style={styles.orderTypeButtonsContainer}>
       <TouchableOpacity
@@ -67,24 +68,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buyButton: {
-    marginRight: 10, // Espacio entre los botones
+    marginRight: 10,
   },
   buyButtonActive: {
-    backgroundColor: "#28A745", // Color verde para "Comprar"
+    backgroundColor: Colors.success,
   },
   sellButtonActive: {
-    backgroundColor: "#FF3B30",
+    backgroundColor: Colors.danger,
   },
   buttonText: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#FFFFFF",
+    color: Colors.white,
   },
   buttonTextSellInactive: {
-    color: "#FF3B30",
+    color: Colors.danger,
   },
   buttonTextBuyInactive: {
-    color: "#28A745",
+    color: Colors.success,
   },
 });
 

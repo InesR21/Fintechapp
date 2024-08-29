@@ -2,7 +2,6 @@ import Colors from "@/constants/Colors";
 import FontAwesome from "@expo/vector-icons/FontAwesome5";
 import { Tabs } from "expo-router";
 import { BlurView } from "expo-blur";
-import CustomHeader from "@/components/CustomHeader";
 
 export default () => {
   return (

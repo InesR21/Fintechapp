@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { createOrder } from "@/features/ordersSlice";
 import Colors from "@/constants/Colors";
 import { useOrderForm } from "@/hooks/useOrderForm";
 import StockInfoCard from "@/components/StockInfoCard";
@@ -18,7 +17,6 @@ const CreateOrderModal = () => {
     last_price,
     close_price,
     returnPercentage,
-    status,
     error,
     formik,
     errors,
@@ -36,7 +34,8 @@ const CreateOrderModal = () => {
     handleQuantityChange,
     handlePriceChange,
     handleChangeOrderType,
-  } = useOrderForm(createOrder);
+    handleShowForm
+  } = useOrderForm();
 
   return (
     <View style={styles.modalContainer}>
@@ -86,7 +85,7 @@ const CreateOrderModal = () => {
       )}
       {error && <Text style={styles.error}>{error}</Text>}
       {showResult && (
-        <ResultDisplay lastOrder={lastOrder} error={error ?? ""} />
+        <ResultDisplay lastOrder={lastOrder} error={error ?? ""} handleShowForm={handleShowForm} />
       )}
     </View>
   );
