@@ -41,7 +41,7 @@ const OrderForm = ({
 
   const labelPriceTitle = isOrderTypeBuy
     ? "¿Qué monto querés invertir?"
-    : "Monton aproximado a recibir";
+    : "Monto aproximado a recibir";
   const labelQuantityTitle = isOrderTypeBuy
     ? "Acciones aproximadas a recibir"
     : "¿Cuantas Acciones querés vender?";
