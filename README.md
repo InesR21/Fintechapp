@@ -1,6 +1,4 @@
-# 🚀 React Native challenge at Cocos Capital
-
-Este es un proyecto hecho para un React Native Challenge de la empresa [Cocos Capital]((https://cocos.capital/))
+# 🚀 React Native App
 
 
 ## Descripción
